@@ -1,0 +1,30 @@
+name: Submit a rig
+description: Share your local AI build and its numbers.
+title: "Rig: "
+labels: [rig]
+body:
+  - type: textarea
+    id: parts
+    attributes: { label: Parts, description: "GPU(s)/APU/Mac, CPU, RAM, PSU. One per line." }
+    validations: { required: true }
+  - type: input
+    id: price
+    attributes: { label: What you paid (USD), description: "Total, and month bought. New or used?" }
+    validations: { required: true }
+  - type: textarea
+    id: stack
+    attributes: { label: Stack, description: "Backend + version (llama.cpp, vLLM, MLX, Ollama…), OS, flags." }
+    validations: { required: true }
+  - type: textarea
+    id: bench
+    attributes:
+      label: Benchmark output
+      description: "Paste `llama-bench -m <model.gguf> -p 512 -n 128` output. Model and quant must be in it."
+      render: text
+    validations: { required: true }
+  - type: input
+    id: watts
+    attributes: { label: Power draw under load (W), description: Optional. }
+  - type: textarea
+    id: photo
+    attributes: { label: Photo, description: "Optional: drag an image here." }
