@@ -99,3 +99,16 @@ table.rigs .n { text-align: right; font-family: var(--mono); font-variant-numeri
 .parts { padding-left: 20px; }
 pre { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; overflow-x: auto; white-space: pre-wrap; font: 13px/1.5 var(--mono); }
 .rig h2 { font-size: 20px; margin: 28px 0 8px; }
+
+/* Submit */
+.who { color: var(--ink); }
+.submit { display: grid; gap: 18px; max-width: 760px; }
+.field { display: grid; gap: 4px; }
+.field label { font-weight: 600; }
+.field label small, .field > small { color: var(--muted); font-weight: 400; font-size: 13px; }
+.field input, .field textarea { width: 100%; padding: 10px 12px; font: 15px/1.5 var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.field textarea.mono { font: 13px/1.45 var(--mono); white-space: pre; overflow-x: auto; }
+.field [aria-invalid="true"] { border-color: var(--warn); }
+.field .flash { margin: 4px 0 0; padding: 6px 10px; font-size: 14px; }
+.logout { color: var(--muted); font-size: 14px; margin-top: 8px; }
+button.link { background: none; color: var(--accent); padding: 0; font: inherit; text-decoration: underline; }
