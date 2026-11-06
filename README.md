@@ -11,3 +11,9 @@ Live: https://stacksnracks.technoir.cloud
 
 ## Roadmap
 ~~v1 rigs explorer from submitted runs~~ · ~~v2 GitHub login + submit form~~ · v3 `snr bench` CLI with verified runs · v4 automated used-price tracking.
+
+## How this was made
+
+I'm a vibe coder. I decide what to build, write the spec and the rules it has to follow, and test the result until it
+does what I said. AI coding agents write the code; I don't write code by hand. Commits under my name were made by an
+agent working for me.
