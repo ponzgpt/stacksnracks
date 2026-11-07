@@ -39,20 +39,20 @@ a.answer:hover { border-color: var(--accent); }
 .answer .s { font: 14px var(--mono); color: var(--accent); }
 
 /* Data tables */
-.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.table { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
 table.grid { width: 100%; border-collapse: collapse; font-size: 14px; }
 .grid th, .grid td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 .grid thead th { font: 11px/1.3 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
 .grid tbody tr:last-child > * { border-bottom: 0; }
 .grid tbody tr:target { background: color-mix(in srgb, var(--accent) 8%, transparent); }
-.grid tbody th { font-weight: 600; min-width: 240px; }
+.grid tbody th { font-weight: 600; }
 .grid small { display: block; color: var(--muted); font: 12px/1.45 var(--sans); font-weight: 400; margin-top: 2px; }
 .grid small a { color: var(--muted); }
 .grid .n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .grid td.n { font-size: 15px; }
 .budget { display: block; font: 700 12px var(--mono); color: var(--accent); margin-bottom: 2px; }
-.grid td.price { white-space: normal; min-width: 150px; max-width: 190px; }
-.value { font-weight: 700; color: var(--accent); min-width: 120px; }
+.grid td.price { white-space: normal; }
+.value { font-weight: 700; color: var(--accent); min-width: 100px; }
 .bar { display: block; width: 100%; height: 6px; margin-top: 6px; }
 .bar rect { fill: var(--accent); }
 .bar rect.track { fill: var(--line); }
@@ -95,7 +95,17 @@ pre { background: var(--panel); border: 1px solid var(--line); border-radius: 8p
 
 footer { padding-top: 24px; padding-bottom: 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 
+/* Narrow screens: each row becomes a card of label → value pairs. No sideways scrolling. */
+@media (max-width: 960px) {
+  .grid thead { display: none; }
+  .grid, .grid tbody, .grid tr, .grid th { display: block; width: 100%; }
+  .grid tbody tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .grid tbody tr:last-child { border-bottom: 0; }
+  .grid tbody th, .grid td { border: 0; padding: 3px 0; }
+  .grid tbody th { padding-bottom: 8px; }
+  .grid td { display: grid; grid-template-columns: minmax(120px, auto) 1fr; column-gap: 12px; text-align: right; white-space: normal; }
+  .grid td::before { content: attr(data-label); grid-row: 1 / span 3; text-align: left; font: 12px/1.9 var(--mono); color: var(--muted); text-transform: uppercase; }
+}
 @media (max-width: 480px) {
   .signup .row { flex-direction: column; }
-  .grid tbody th { min-width: 200px; }
 }
