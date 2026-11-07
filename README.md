@@ -7,10 +7,10 @@ Live: https://stacksnracks.technoir.cloud
 - Zero dependencies, Node 24: `npm run dev`, then open http://localhost:3000
 - Tier data and price sources: `data/tiers.json`
 - Estimate model: `lib/estimate.js` (decode tok/s ≈ bandwidth × 0.6 ÷ model size)
-- Submit a rig at `/submit` (Sign in with GitHub) or with the **Submit a rig** issue template; both become issues. A maintainer adds the `approved` label and it appears at `/rigs` within 10 minutes.
+- Submit a rig with the **Submit a rig** issue template. A maintainer adds the `approved` label and it appears at `/rigs` within 10 minutes.
 
 ## Roadmap
-~~v1 rigs explorer from submitted runs~~ · ~~v2 GitHub login + submit form~~ · v3 `snr bench` CLI with verified runs · v4 automated used-price tracking.
+~~v1 rigs explorer from submitted runs~~ · ~~v2 GitHub login + submit form~~ (cut in favour of the issue form) · v3 `snr bench` CLI with verified runs · v4 automated used-price tracking.
 
 ## How this was made
 
