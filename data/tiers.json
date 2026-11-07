@@ -1,93 +1,93 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-11-07",
   "tiers": [
     {
       "id": "entry-3090",
-      "budget": "~$1.2k",
+      "budget": "~$1.35k",
       "name": "Used RTX 3090",
       "core": "1× RTX 3090 24GB (used)",
       "memGb": 24,
       "bwGbs": 936,
       "price": {
-        "low": 1000,
-        "high": 1300,
-        "what": "GPU only, used; add a host PC"
+        "low": 1200,
+        "high": 1500,
+        "what": "GPU only, used (eBay lowest offer, at a 90-day high); add a host PC"
       },
       "source": {
-        "label": "insiderllm, GB10 vs Strix Halo vs used 3090",
-        "url": "https://insiderllm.com/guides/gb10-boxes-compared/"
+        "label": "GPU Dojo, RTX 3090 used price (Nov 2026)",
+        "url": "https://gpudojo.com/rtx-3090"
       },
       "why": "Still the cheapest bandwidth per dollar you can buy. 24GB caps you at ~32B dense."
     },
     {
       "id": "dual-3090",
-      "budget": "~$2.3k",
+      "budget": "~$2.7k",
       "name": "2× used RTX 3090",
       "core": "2× RTX 3090 24GB (used), layer split",
       "memGb": 48,
       "bwGbs": 936,
       "price": {
-        "low": 2000,
-        "high": 2600,
+        "low": 2400,
+        "high": 3000,
         "what": "GPUs only, used; needs a 1200W+ PSU and a board with two x8 slots"
       },
       "source": {
-        "label": "insiderllm, GB10 vs Strix Halo vs used 3090",
-        "url": "https://insiderllm.com/guides/gb10-boxes-compared/"
+        "label": "GPU Dojo, RTX 3090 used price (Nov 2026), ×2",
+        "url": "https://gpudojo.com/rtx-3090"
       },
       "why": "Doubles capacity, not decode speed. The cheapest way to run 70B entirely on GPU."
     },
     {
       "id": "strix-halo",
-      "budget": "~$3.6k",
+      "budget": "~$3.35k",
       "name": "Strix Halo 128GB",
       "core": "Ryzen AI Max+ 395, 128GB LPDDR5X (e.g. Bosgame M5)",
       "memGb": 110,
       "bwGbs": 256,
       "price": {
-        "low": 3400,
-        "high": 3800,
-        "what": "complete mini PC"
+        "low": 3100,
+        "high": 3600,
+        "what": "complete mini PC, 128GB + 2TB (Bosgame sale $3,099, Best Buy $3,599)"
       },
       "source": {
-        "label": "insiderllm, GB10 vs Strix Halo vs used 3090",
-        "url": "https://insiderllm.com/guides/gb10-boxes-compared/"
+        "label": "Bosgame M5 store listing",
+        "url": "https://www.bosgame.com/products/bosgame-m5-ai-mini-desktop-ryzen-ai-max-395-96gb-128gb-2tb"
       },
       "why": "Huge capacity per dollar, low power. Bandwidth is the ceiling: great for MoE, slow on big dense models."
     },
     {
       "id": "rtx-5090",
-      "budget": "~$4.6k",
+      "budget": "~$7.5k",
       "name": "RTX 5090",
       "core": "1× RTX 5090 32GB (new, street price)",
       "memGb": 32,
       "bwGbs": 1792,
       "price": {
-        "low": 4300,
-        "high": 5000,
-        "what": "GPU only, US street price; MSRP was $1,999"
+        "low": 6900,
+        "high": 8000,
+        "what": "GPU only, US street price Nov 3–5; MSRP $1,999, spikes past $9k"
       },
       "source": {
-        "label": "Tech Insider, RTX 5090 price at $4,329",
-        "url": "https://tech-insider.org/rtx-5090-price-4329-rtx-60-delay-2028-2026/"
+        "label": "Tech Insider, Tom's Hardware GPU price tracking (Nov 2026)",
+        "url": "https://tech-insider.org/gpu-price-tracking-2026-rtx-5090-6919-tomshardware-lowest-prices/"
       },
-      "why": "Unbeatable speed, but at 2×+ MSRP the value is poor and 32GB does not fit 70B Q4."
+      "why": "Unbeatable speed, but at 3.5–4× MSRP you pay ~5× a used 3090 for ~2× its speed, and 32GB doesn't fit 70B Q4."
     },
     {
       "id": "mac-m5-max",
-      "budget": "~$5.1k",
+      "budget": "~$5.25k",
       "name": "Mac Studio M5 Max",
       "core": "Mac Studio M5 Max, 128GB unified",
       "memGb": 96,
       "bwGbs": 614,
       "price": {
-        "low": 5000,
-        "high": 5200,
-        "what": "complete machine, Apple list price"
+        "low": 5100,
+        "high": 5400,
+        "what": "complete machine, 128GB / 40-core GPU / 1TB"
       },
       "source": {
-        "label": "insiderllm, GB10 vs Strix Halo vs used 3090",
-        "url": "https://insiderllm.com/guides/gb10-boxes-compared/"
+        "label": "B&H Photo, Mac Studio M5 Max",
+        "url": "https://www.bhphotovideo.com/c/product/1997808-REG/apple_ms_m5m_16_mac_studio_m5_max.html"
       },
       "why": "Best capacity × bandwidth in one silent box. macOS lets the GPU use ~75% of RAM by default."
     },
@@ -101,11 +101,11 @@
       "price": {
         "low": 6950,
         "high": 6950,
-        "what": "complete machine, after the Oct 2 price change"
+        "what": "complete machine, 128GB list price; third-party up to ~$8.5k; a 64GB model is $4,999"
       },
       "source": {
-        "label": "AIMultiple, DGX Spark alternatives",
-        "url": "https://research.aimultiple.com/dgx-spark-alternatives"
+        "label": "Spheron, GB10 / DGX Spark price",
+        "url": "https://www.spheron.network/gpu-price/gb10/"
       },
       "why": "Buy it for the CUDA stack, not for decode speed: bandwidth is similar to Strix Halo at ~2× the price."
     }
